@@ -13,7 +13,7 @@ def decrypt_caesar(text: str, shift: int) -> str:
             encrypted_letter = upper.index(i) #finds index of encrypted letter within the upper case list
             shifted_index = encrypted_letter + shift #perform the shift to find the index of the decrypted letter
             decrypted_letter = upper[shifted_index] #use shifted index to find decrypted element
-            decrypted_letters.append(decrypted_letter) #append all decrypted letters to this list 
+            decrypted_letters.append(decrypted_letter) #append all encrypted letters to this list 
         elif i in lower: #same if loop as above but for lower case letters
             encrypted_letter = lower.index(i)
             shifted_index = encrypted_letter + shift
@@ -23,7 +23,7 @@ def decrypt_caesar(text: str, shift: int) -> str:
             decrypted_letters.append(i) #case where there is no letters ie punctuation or digits are entered
 
 
-    decrypted_word = print(''.join(decrypted_letters)) #print decrypted word
+    decrypted_word = print(''.join(decrypted_letters)) #print encrypted word
 
 
 def main() -> None:
